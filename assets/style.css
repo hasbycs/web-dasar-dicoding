@@ -2,7 +2,9 @@
     font-family: "Quicksand", sans-serif;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 /* awal Header */
 
 .header {
@@ -73,6 +75,7 @@
 .flex-container-row {
     display: flex;
     height: 100%;
+    justify-content: center;
 }
 .box {
     padding: 10px;
@@ -85,11 +88,11 @@ img.featured-image {
     object-position: center;
 }
 .image-side {
-    flex-basis: 40%;
+    flex-basis: 30%;
     text-align: center;
 }
 .text-side {
-    flex-basis: 60%;
+    flex-basis: 50%;
 }
 .sentence {
     margin-top: 100px;
@@ -100,8 +103,6 @@ img.featured-image {
 .card-title {
     font-size: 2rem;
     text-align: center;
-}
-.description {
 }
 .container {
     width: 100%;
@@ -148,11 +149,12 @@ img.featured-image {
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
     margin: 1em;
     cursor: pointer;
+    filter: grayscale(70%);
 }
 
 .card:hover {
     filter: none;
-    -webkit-filter: grayscale(70%);
+    filter: grayscale(0%);
 }
 
 .card .card-header {
@@ -244,4 +246,19 @@ img.featured-image {
 .container-card {
     display: flex;
     justify-content: center;
+}
+
+.about__container {
+    row-gap: 2rem;
+    text-align: center;
+}
+.about__subtitle {
+    margin-bottom: var(--mb-2);
+}
+.about__img {
+    justify-self: center;
+}
+.about__img img {
+    width: 200px;
+    border-radius: 0.5rem;
 }
